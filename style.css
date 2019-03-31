@@ -1,0 +1,174 @@
+html {
+    background-color: rgb(235, 235, 255);
+    font-family: 'Montserrat', sans-serif;
+    height: 100%;
+    width: 100%;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+nav {
+    text-align: center;
+    font-size: 1.3em;
+    position: fixed;
+    padding-top: 20px; 
+    height: 80px;
+    width: 100%;
+    background-color: rgb(224, 224, 255);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+nav li {
+    width: 75px;
+    margin: 20px 40px 0px 40px;
+}
+
+a:link {
+    text-decoration: none;
+    color: rgb(3, 3, 29);    
+}
+
+a:visited {
+    color: rgb(3, 3, 29);
+}
+
+a:hover {
+    text-shadow: 1px 0px 1px rgb(113, 57, 158);
+}
+
+#welcome-wrapper {
+    display: inline-block;
+    height: 100vh;
+    width: 100%;
+}
+
+#welcome-section {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 100px;
+    width: 100%;
+    height: 100%;
+}
+
+#welcome-img {
+    width: auto;
+    height: auto;
+    max-width: 600px;
+    max-height: 600px;
+    min-height: 400px;
+    min-width: 300px;
+    margin-bottom: 0px;
+    border-radius: 5px;
+}
+
+#welcome-text-wrapper {
+    width: 50%;
+    min-width: 500px;
+    margin: auto;
+    font-weight: normal;
+}
+
+#welcome-heading {
+    font-weight: normal;
+    font-size: 4em;
+    line-height: 100px;
+}
+
+#welcome-subheading {
+    font-size: 1.9em;
+    line-height: 50px;
+}
+
+#Projects {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(238, 218, 255);
+}
+
+.project-tile {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    height: 300px;
+    width: 400px;
+    border: 1px solid rgb(27, 0, 27);
+    border-radius: 10px;
+    background-color: rgb(246, 242, 255);
+    margin: 50px auto;
+}
+
+.project-image {
+    height: 175px;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: 1px solid rgb(27, 0, 27);
+    margin: 0;
+    background-color: #fff;
+}
+
+.project-text {
+    margin: 30px 5px auto 5px;
+}
+
+#Contact {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: center;
+    height: 20vh;
+    min-width: 500px;
+    width: 100%;
+    background-color: rgb(209, 198, 235);
+}
+
+.contact-link {
+    margin: auto;
+    font-size: 1.5em;
+    background-color: rgb(251, 240, 255);
+    padding: 20px;
+    border: 1px solid rgb(35, 0, 63);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+@media screen and (max-width: 1150px) {
+    #welcome-wrapper {
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+    }
+    
+    #welcome-text-wrapper {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        font-weight: normal;
+        font-size: 0.75em;
+        text-align: center;
+    }
+
+    #Contact {
+        align-content: space-around;
+    }
+
+    .contact-link {
+        height: auto;
+        width: auto;
+    }
+}
