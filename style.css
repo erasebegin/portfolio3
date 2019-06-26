@@ -1,5 +1,5 @@
 html {
-    background-color: rgb(235, 235, 255);
+    background-color: rgb(246, 230, 255);
     font-family: 'Montserrat', sans-serif;
     height: 100%;
     width: 100%;
@@ -17,7 +17,10 @@ nav {
     padding-top: 20px; 
     height: 80px;
     width: 100%;
-    background-color: rgb(224, 224, 255);
+    background: #59C173;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #5D26C1 10%, #a17fe0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #5D26C1 10%, #a17fe0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    box-shadow: 2px 3px 5px rgb(130, 121, 134);
 }
 
 nav ul {
@@ -34,11 +37,11 @@ nav li {
 
 a:link {
     text-decoration: none;
-    color: rgb(3, 3, 29);    
+    color: #ebe0ff;    
 }
 
 a:visited {
-    color: rgb(3, 3, 29);
+    color: #d8c5fc;
 }
 
 a:hover {
@@ -69,6 +72,7 @@ a:hover {
     min-height: 400px;
     min-width: 300px;
     margin-bottom: 0px;
+    margin-left:200px;
     border-radius: 5px;
 }
 
@@ -123,6 +127,14 @@ a:hover {
     background-color: #fff;
 }
 
+.project-url:link {
+    color: rgb(113, 57, 158);
+}
+
+.project-url:visited {
+    color: rgb(113, 57, 158);
+}
+
 .project-text {
     margin: 30px 5px auto 5px;
 }
@@ -161,6 +173,10 @@ a:hover {
         font-weight: normal;
         font-size: 0.75em;
         text-align: center;
+    }
+
+    #welcome-img {
+        margin-left: 0px;
     }
 
     #Contact {
