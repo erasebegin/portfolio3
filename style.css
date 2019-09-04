@@ -1,79 +1,136 @@
-html {
-    background-color: rgb(246, 230, 255);
-    font-family: 'Montserrat', sans-serif;
-    height: 100%;
-    width: 100%;
-}
+/* DEFAULTS */
 
 * {
     margin: 0px;
     padding: 0px;
+    border: none;
+    --theme1: #D575FF;
+    --theme2: #A06BE8;
+    --theme3: #9582FF;
+    --theme4: #6B7AE8;
+    --theme5: #75AAFF;
 }
+
+html {
+    background-color: rgba(241,255,244,1);
+    font-family: 'Montserrat', sans-serif;
+    height: 100%;
+    width: 100%;
+
+    /* Animated gradient by gradient-animator.com */
+    background: linear-gradient(20deg, var(--theme3), white, var(--theme5));
+    background-size: 300% 600%;
+
+    -webkit-animation: bg-gradient-animated 15s ease infinite;
+    -moz-animation: bg-gradient-animated 15s ease infinite;
+    animation: bg-gradient-animated 15s ease infinite;
+
+    @-webkit-keyframes bg-gradient-animated {
+        0%{background-position:23% 0%}
+        50%{background-position:78% 100%}
+        100%{background-position:23% 0%}
+    }
+    @-moz-keyframes bg-gradient-animated {
+        0%{background-position:23% 0%}
+        50%{background-position:78% 100%}
+        100%{background-position:23% 0%}
+    }
+    @keyframes bg-gradient-animated { 
+        0%{background-position:23% 0%}
+        50%{background-position:78% 100%}
+        100%{background-position:23% 0%}
+    }
+}
+
+header {
+    display: inline-block;
+    width: 100vw;
+    height: 100px;
+    background: var(--theme3);
+}
+
+/* NAVIGATION */
+/* Navigation bar by Patak https://codepen.io/Patak/pen/QpLpOV/ */
 
 nav {
-    text-align: center;
-    font-size: 1.3em;
-    position: fixed;
-    padding-top: 20px; 
-    height: 80px;
-    width: 100%;
-    background: #59C173;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, #5D26C1 10%, #a17fe0);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #5D26C1 10%, #a17fe0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    box-shadow: 2px 3px 5px rgb(130, 121, 134);
+	margin: 27px auto 0;
+
+	position: relative;
+	width: 310px;
+	height: 50px;
+	background-color: var(--theme5);
+	border-radius: 8px;
+	font-size: 0;
+}
+nav a {
+	line-height: 50px;
+	height: 100%;
+	font-size: 15px;
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+}
+nav .animation {
+	position: absolute;
+	height: 100%;
+	top: 0;
+	z-index: 0;
+	transition: all .5s ease 0s;
+	border-radius: 8px;
+}
+a:nth-child(1) {
+	width: 100px;
+}
+a:nth-child(2) {
+	width: 110px;
+}
+a:nth-child(3) {
+	width: 100px;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
+nav .start-home, a:nth-child(1):hover~.animation {
+	width: 100px;
+	left: 0;
+	background-color: var(--theme1);
+}
+nav .start-about, a:nth-child(2):hover~.animation {
+	width: 110px;
+	left: 100px;
+	background-color: var(--theme4);
+}
+nav .start-blog, a:nth-child(3):hover~.animation {
+	width: 100px;
+	left: 210px;
+	background-color: var(--theme2);
 }
 
-nav li {
-    width: 75px;
-    margin: 20px 40px 0px 40px;
-}
-
-a:link {
-    text-decoration: none;
-    color: #ebe0ff;    
-}
-
-a:visited {
-    color: #d8c5fc;
-}
-
-a:hover {
-    text-shadow: 1px 0px 1px rgb(113, 57, 158);
-}
+/* WELCOME SECTION */
 
 #welcome-wrapper {
     display: inline-block;
-    height: 100vh;
+    height: 75vh;
     width: 100%;
 }
 
 #welcome-section {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 100px;
-    width: 100%;
-    height: 100%;
+    justify-content: space-between;
+    align-items: flex-end;
+    justify-items: flex-end;
 }
 
 #welcome-img {
-    width: auto;
-    height: auto;
-    max-width: 600px;
-    max-height: 600px;
-    min-height: 400px;
-    min-width: 300px;
+    margin: auto;
     margin-bottom: 0px;
     margin-left:200px;
-    border-radius: 5px;
+    width: auto;
+    max-width: 400px;
 }
 
 #welcome-text-wrapper {
@@ -85,22 +142,24 @@ a:hover {
 
 #welcome-heading {
     font-weight: normal;
-    font-size: 4em;
+    font-size: 4rem;
     line-height: 100px;
+    color: rgb(0, 36, 24);
 }
 
 #welcome-subheading {
-    font-size: 1.9em;
+    font-size: 1.9rem;
     line-height: 50px;
 }
+
+
+/* PROJECTS */
 
 #Projects {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
-    height: 100%;
-    width: 100%;
-    background-color: rgb(238, 218, 255);
+    background-color: rgba(255, 255, 255,0.1);
 }
 
 .project-tile {
@@ -113,7 +172,7 @@ a:hover {
     width: 400px;
     border: 1px solid rgb(27, 0, 27);
     border-radius: 10px;
-    background-color: rgb(246, 242, 255);
+    background-color: var(--theme5);
     margin: 50px auto;
 }
 
@@ -124,20 +183,26 @@ a:hover {
     border-top-right-radius: 10px;
     border-bottom: 1px solid rgb(27, 0, 27);
     margin: 0;
-    background-color: #fff;
 }
 
-.project-url:link {
-    color: rgb(113, 57, 158);
+.type2-url:link {
+    color: rgb(12, 49, 34);
 }
 
-.project-url:visited {
-    color: rgb(113, 57, 158);
+.type2-url:visited {
+    color: rgb(12, 49, 34);
+}
+
+.type2-url:hover{
+    color: rgb(144, 80, 196);
 }
 
 .project-text {
     margin: 30px 5px auto 5px;
+    padding: 0px 10px 0px 10px;
 }
+
+/* CONTACT */
 
 #Contact {
     display: flex;
@@ -152,7 +217,7 @@ a:hover {
 
 .contact-link {
     margin: auto;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     background-color: rgb(251, 240, 255);
     padding: 20px;
     border: 1px solid rgb(35, 0, 63);
@@ -168,10 +233,11 @@ a:hover {
     }
     
     #welcome-text-wrapper {
+        min-width: 600px;
         margin-top: 50px;
         margin-bottom: 50px;
         font-weight: normal;
-        font-size: 0.75em;
+        font-size: 1rem;
         text-align: center;
     }
 
