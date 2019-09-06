@@ -12,18 +12,15 @@
 }
 
 html {
-    background-color: rgba(241,255,244,1);
     font-family: 'Montserrat', sans-serif;
-    height: 100%;
-    width: 100%;
 
     /* Animated gradient by gradient-animator.com */
-    background: linear-gradient(20deg, var(--theme3), white, var(--theme5));
-    background-size: 300% 600%;
+    background: linear-gradient(20deg, rgb(84, 43, 143), rgb(141, 184, 255), white);
+    background-size: 200% 300%;
 
-    -webkit-animation: bg-gradient-animated 15s ease infinite;
-    -moz-animation: bg-gradient-animated 15s ease infinite;
-    animation: bg-gradient-animated 15s ease infinite;
+    -webkit-animation: bg-gradient-animated 18s ease infinite;
+    -moz-animation: bg-gradient-animated 18s ease infinite;
+    animation: bg-gradient-animated 18s ease infinite;
 
     @-webkit-keyframes bg-gradient-animated {
         0%{background-position:23% 0%}
@@ -38,15 +35,18 @@ html {
     @keyframes bg-gradient-animated { 
         0%{background-position:23% 0%}
         50%{background-position:78% 100%}
-        100%{background-position:23% 0%}
+        100%{background-position:23% 0%} 
     }
 }
 
 header {
-    display: inline-block;
-    width: 100vw;
+    display: block;
+    position: fixed;
+    width: 100%;
     height: 100px;
     background: var(--theme3);
+    box-shadow: 0.1rem 0.2rem 1rem rgba(120, 0, 150, 0.199);
+    z-index: 1;
 }
 
 /* NAVIGATION */
@@ -54,7 +54,6 @@ header {
 
 nav {
 	margin: 27px auto 0;
-
 	position: relative;
 	width: 310px;
 	height: 50px;
@@ -113,43 +112,41 @@ nav .start-blog, a:nth-child(3):hover~.animation {
 
 #welcome-wrapper {
     display: inline-block;
-    height: 75vh;
+    margin-top: 100px;
+    height: 90vh;
     width: 100%;
 }
 
 #welcome-section {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: flex-end;
-    justify-items: flex-end;
 }
 
 #welcome-img {
-    margin: auto;
-    margin-bottom: 0px;
-    margin-left:200px;
+    display: block;
+    margin: 50px auto;
     width: auto;
     max-width: 400px;
 }
 
 #welcome-text-wrapper {
     width: 50%;
-    min-width: 500px;
     margin: auto;
-    font-weight: normal;
+    font-weight: 700;
+    color: var(--theme4);
 }
 
 #welcome-heading {
-    font-weight: normal;
+    font-weight: 700;
     font-size: 4rem;
     line-height: 100px;
-    color: rgb(0, 36, 24);
+    filter: brightness(60%);
 }
 
 #welcome-subheading {
     font-size: 1.9rem;
-    line-height: 50px;
+    line-height: 3.5rem;
+    filter: brightness(40%)
 }
 
 
@@ -165,24 +162,27 @@ nav .start-blog, a:nth-child(3):hover~.animation {
 .project-tile {
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
+    justify-content: flex-start;
     align-content: center;
     text-align: center;
-    height: 300px;
-    width: 400px;
+    height: 400px;
     border: 1px solid rgb(27, 0, 27);
     border-radius: 10px;
     background-color: var(--theme5);
     margin: 50px auto;
 }
 
-.project-image {
-    height: 175px;
-    width: 100%;
+.img-container {
+    width: 200px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     border-bottom: 1px solid rgb(27, 0, 27);
     margin: 0;
+    /* object-fit:fill; */
+}
+
+.project-image {
+    width: 100%;
 }
 
 .type2-url:link {
@@ -204,46 +204,110 @@ nav .start-blog, a:nth-child(3):hover~.animation {
 
 /* CONTACT */
 
+
+
+
+
 #Contact {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    align-content: center;
-    height: 20vh;
-    min-width: 500px;
+    flex-flow: row nowrap;
+    justify-items: space-around;
+    align-items: center;
+    height: 30vh;
     width: 100%;
-    background-color: rgb(209, 198, 235);
+    background-color: rgba(241, 236, 253, 0.5); 
 }
+
+.nav-box {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    margin: auto;
+    height: 100px;
+    width: 150px;
+    background: var(--theme4);
+    border-radius: 2px;
+  }
+  
+  .nav-box::before,
+  .nav-box::after {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    width: 40%;
+    height: 10px;
+    box-shadow: 0 5px 14px rgb(0, 0, 0);
+    z-index: -1;
+    transition: all .3s ease-in-out;
+  }
+  
+  .nav-box::before {
+    left: 15px;
+    transform: skew(-5deg) rotate(-5deg);
+  }
+  
+  .nav-box::after {
+    right: 15px;
+    transform: skew(5deg) rotate(5deg);
+  }
+  
+  .nav-box:hover::before,
+  .nav-box:hover::after {
+    box-shadow: 0 2px 14px rgba(20, 0, 34, 0.664);
+    background: var(--theme4);
+    filter: brightness(20%);
+  }
+  
+  .nav-box:hover::before {
+    left: 5px;
+    background: var(--theme4);
+    filter: brightness(20%);
+  }
+  
+  .nav-box:hover::after {
+    right: 5px;
+    background: var(--theme4);
+    filter: brightness(20%);
+  }
 
 .contact-link {
-    margin: auto;
-    font-size: 1.5rem;
-    background-color: rgb(251, 240, 255);
-    padding: 20px;
-    border: 1px solid rgb(35, 0, 63);
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    text-decoration: none;
+    color: rgba(20, 0, 34, 0.664);
 }
 
-@media screen and (max-width: 1150px) {
+.contact-link:visited {
+    color: rgba(20, 0, 34, 0.664);
+}
+
+
+
+@media screen and (max-width: 750px) {
+ 
+
     #welcome-wrapper {
-        display: inline-block;
-        height: 100%;
         width: 100%;
-    }
-    
-    #welcome-text-wrapper {
-        min-width: 600px;
-        margin-top: 50px;
-        margin-bottom: 50px;
-        font-weight: normal;
-        font-size: 1rem;
-        text-align: center;
+        height: 1400px;
+        flex-direction: column;
     }
 
-    #welcome-img {
-        margin-left: 0px;
+    
+    #welcome-text-wrapper {
+        margin-top: 0px;
+        margin-bottom: 50px;
+        font-size: 16px;
+        text-align: center;
+        width:100%;
     }
+
+    #welcome-subheading {
+        margin-top: 40px;
+    }
+
+    /* #welcome-img {
+        margin-left: 0px;
+    } */
 
     #Contact {
         align-content: space-around;

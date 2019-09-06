@@ -2,13 +2,15 @@
 <html>
     <head>
         <title>Chris Haupt's Portfolio</title>
+        <script src="https://kit.fontawesome.com/f5f87e1ceb.js"></script>
         <link rel="icon" href="favicon.ico" type="image/x-icon">
         <link rel="stylesheet" type='text/css' href="style.css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,700,900" rel="stylesheet">
     </head>
+    <body class='main'>
     <header>
         <nav>
-            <a href="top">Welcome</a>
+            <a href="#top">Welcome</a>
             <a href="#Projects">Projects</a>
             <a href="#Contact">Contact</a>
             <div class="animation start-home"></div>
@@ -25,38 +27,47 @@
         </div>
         <div id='Projects'>
             <div id='project-tile1' class='project-tile'>
-                <a href='erasebegin.github.io/necessary-products'><img id='project-image1' class='project-image' src='https://i.ibb.co/F06kxq8/2019-03-28.png'></a>
-                <div id='project-text1' class='project-text'><b><a href='http://erasebegin.github.io/necessary-products' target='_blank' class='type2-url'>Necessary Products</a></b><br>Demonstration of a product landing page</div>
+                <div class="img-container">
+                    <a href='erasebegin.github.io/necessary-products'><img id='project-image1' class='project-image' src='https://i.ibb.co/F06kxq8/2019-03-28.png'></a>
+                    <p id='project-text1' class='project-text'><b><a href='http://erasebegin.github.io/necessary-products' target='_blank' class='type2-url'>Necessary Products</a></b><br>Demonstration of a product landing page</p>
+                </div>
             </div>
             <div id='project-tile2' class='project-tile'>
-                <a href='erasebegin.github.io/js-journal'><img id='project-image1' class='project-image' src='https://i.ibb.co/25dY6vt/js-journal.png'></a>
-                <div id='project-text1' class='project-text'><b><a href='http://erasebegin.github.io/js-journal' target='_blank' class='type2-url'>JS Journal</a></b><br>A journal of my adventures in learning Javscript.</div>
+                <div class="img-container">
+                    <a href='erasebegin.github.io/js-journal'><img id='project-image1' class='project-image' src='https://i.ibb.co/25dY6vt/js-journal.png'></a>
+                    <p id='project-text2' class='project-text'><b><a href='http://erasebegin.github.io/js-journal' target='_blank' class='type2-url'>JS Journal</a></b><br>A journal of my adventures in learning Javscript.</p>
+                </div>
             </div>
             <div id='project-tile3' class='project-tile'>
                 <img id='project-image3' class='project-image' src=' '>
-                <div id='project-text3' class='project-text'><b>Project Title</b><br>This is project text about the project</div>
+                <p id='project-text3' class='project-text'><b>Project Title</b><br>This is project text about the project</p>
             </div>
             <div id='project-tile4' class='project-tile'>
                 <img id='project-image4' class='project-image' src=' '>
-                <div id='project-text4' class='project-text'><b>Project Title</b><br>This is project text about the project</div>
+                <p id='project-text4' class='project-text'><b>Project Title</b><br>This is project text about the project</p>
             </div>
             <div id='project-tile5' class='project-tile'>
                 <img id='project-image5' class='project-image' src=' '>
-                <div id='project-text5' class='project-text'><b>Project Title</b><br>This is project text about the project</div>
+                <p id='project-text5' class='project-text'><b>Project Title</b><br>This is project text about the project</p>
             </div>
             <div id='project-tile6' class='project-tile'>
                 <img id='project-image6' class='project-image' src=' '>
-                <div id='project-text6' class='project-text'><b>Project Title</b><br>This is project text about the project</div>
+                <p id='project-text6' class='project-text'><b>Project Title</b><br>This is project text about the project</p>
             </div>
         </div>
         <div id = 'Illustration'>
 
         </div>
         <div id='Contact'>
-            <div id='email'><a href='mailto:chris.james.haupt@gmail.com' class='contact-link'>Email</a></div>
-            <div id='facebook'><a href='http://www.facebook.com' class='contact-link' target='_blank'>Facebook</a></div>
-            <div id='github'><a href='http://www.github.com/erasebegin' class='contact-link' target='_blank'>Github</a></div> 
-            <div id='phone'><a href='tel:+8615158197693' class='contact-link'>Phone</a></div>
-            <div id='skype'><a href='skype:chris.james.haupt' class='contact-link'>Skype</a></div>
+            <div id='email' class='nav-box'>
+                <a href='mailto:chris.james.haupt@gmail.com' class='contact-link'><i class="fas fa-envelope-open-text fa-3x"></i></a>
+            </div>
+            <div id='facebook' class='nav-box'>
+                <a href='http://www.facebook.com' class='contact-link' target='_blank'><i class="fab fa-facebook fa-3x"></i></a>
+            </div>
+            <div id='github' class='nav-box'>
+                <a href='http://www.github.com/erasebegin' class='contact-link' target='_blank'><i class="fab fa-github-alt fa-3x"></i></a>
+            </div> 
         </div>
+        </body>
 </html>
