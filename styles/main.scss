@@ -1,0 +1,87 @@
+@import './_nav-buttons.scss';
+@import './_gradient-animation.scss';
+@import './_card.scss';
+
+// GENERAL PROPERTIES
+
+* {
+    margin: 0;
+    padding: 0;
+    --pink: #D575FF;
+    --purple1: #A06BE8;
+    --purple2: #9582FF;
+    --purple-dark: #6B7AE8;
+    --purple-blue: #75AAFF;
+}
+
+body {
+    width: 100%;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+section {
+    display: flex;
+}
+
+header {
+    display: inline-block;
+    position: fixed;
+    height: 100px;
+    width: 100%;
+    background: var(--purple2);
+    box-shadow: 0.1rem 0.2rem 1rem rgba(120, 0, 150, 0.199);
+    z-index: 1;
+}
+
+//WELCOME SECTION
+
+#welcome-section {
+        width: 100%;
+        height: 100vh;
+        justify-items: space-around;
+
+    #welcome-img {
+        margin: auto auto 0 auto;
+        width: 30%;
+    }
+
+    #welcome-text-wrapper {
+        margin: auto;
+        width: 40%;
+        font-family: Montserrat;
+
+        h1 { 
+            font-size: 4rem;
+            margin: 1em 0 0.4em 0;
+            line-height: 1.8em;
+        }
+
+        h2 {
+            font-size: 2rem;
+
+            .subheading-p {
+                margin: 0.5em 0;
+            }
+        }
+    }
+}
+
+//PROJECTS SECTION
+
+#Projects {
+    
+    justify-content: space-around;
+    align-content: space-around;
+    border: 2px dashed red;
+
+    .card {
+        margin: 2em 2em;
+        border: 2px dashed green;
+    }
+}
+
+

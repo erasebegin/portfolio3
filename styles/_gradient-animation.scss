@@ -1,0 +1,26 @@
+    /* Animated gradient by gradient-animator.com */
+    
+ .gradient-animation {   
+    background: linear-gradient(20deg, rgb(84, 43, 143), rgb(141, 184, 255), white);
+    background-size: 200% 300%;
+
+    -webkit-animation: bg-gradient-animated 18s ease infinite;
+    -moz-animation: bg-gradient-animated 18s ease infinite;
+    animation: bg-gradient-animated 18s ease infinite;
+
+    @-webkit-keyframes bg-gradient-animated {
+        0%{background-position:23% 0%}
+        50%{background-position:78% 100%}
+        100%{background-position:23% 0%}
+    }
+    @-moz-keyframes bg-gradient-animated {
+        0%{background-position:23% 0%}
+        50%{background-position:78% 100%}
+        100%{background-position:23% 0%}
+    }
+    @keyframes bg-gradient-animated { 
+        0%{background-position:23% 0%}
+        50%{background-position:78% 100%}
+        100%{background-position:23% 0%} 
+    }
+}
