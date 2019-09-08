@@ -2,81 +2,87 @@
 <html>
     <head>
         <title>Chris Haupt's Portfolio</title>
-        <script src="https://kit.fontawesome.com/f5f87e1ceb.js"></script>
-        <link rel="icon" href="favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" type='text/css' href="./styles/main.css">
-        <script src="http://code.jquery.com/jquery-3.4.1.min.js"
-                integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-                crossorigin="anonymous">
-        </script>
-    <!-- Load in external html to #card element -->
-        <script>
-            $(function(){
-                $('.card').load('./imports/card.html');
-            });
-        </script>
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,700,900" rel="stylesheet">
+        <script src='https://kit.fontawesome.com/f5f87e1ceb.js'></script>
+        <link rel='icon' href='favicon.ico' type='image/x-icon'>
+        <link rel='stylesheet' type='text/css' href='./styles/main.css'>
+        <link href='https://fonts.googleapis.com/css?family=Montserrat:300,300i,700,900' rel='stylesheet'>
     </head>
+
     <body class='main gradient-animation'>
     <header>
         <nav>
-            <a href="#top">Welcome</a>
-            <a href="#Projects">Projects</a>
-            <a href="#Contact">Contact</a>
-
+            <a href='#top'>Welcome</a>
+            <a href='#Projects'>Projects</a>
+            <a href='#Contact'>Contact</a>
             <!-- used by _nav-buttons.scss -->
-            <div class="animation start-home"></div>
+            <div class='animation start-home'></div>
         </nav>
     </header>
-        <section id='welcome-section'>
-            <img id='welcome-img' src="https://i.ibb.co/vwz3zFW/mai-faec1-2x.png" alt="mai faec">
-            <div id='welcome-text-wrapper'>
-                <h1 id='welcome-heading'>Hey, I'm Chris<br>你好，我叫克里斯</h1>
-                <h2 id='welcome-subheading'>
-                    <p class='subheading-p'>I'm a web developer and illustrator.</p> 
-                    <p class='subheading-p'>Check out my projects below.</p>
-                    <p class='subheading-p'>我是网页开发者和插画师。</p>
-                    <p class='subheading-p'>往下面看我的项目吧。</p>
-                </h2>
-            </div>
-        </section>
+
+    <section id='Welcome'>
+        <img id='welcome-img' src='https://i.ibb.co/vwz3zFW/mai-faec1-2x.png' alt='mai faec'>
+        <div id='welcome-text-wrapper'>
+            <h1 id='welcome-heading'>Hey, I'm Chris<br>你好，我叫克里斯</h1>
+            <h2 id='welcome-subheading'>
+                <p class='subheading-p'>I'm a web developer and illustrator.</p> 
+                <p class='subheading-p'>Check out my projects below.</p>
+                <p class='subheading-p'>我是网页开发者和插画师。</p>
+                <p class='subheading-p'>往下面看我的项目吧。</p>
+            </h2>
+        </div>
+    </section>
+
     <section id='Projects'>
-        <div class="box-container">
-        <!-- <div class='project-tile box gallery'>
-            <div class="img-container">
-                <a href='erasebegin.github.io/necessary-products'><img id='project-image1' class='project-image' src='https://i.ibb.co/F06kxq8/2019-03-28.png'></a>
-                <p id='project-text1' class='project-text'><b><a href='http://erasebegin.github.io/necessary-products' target='_blank' class='type2-url'>Necessary Products</a></b><br>Demonstration of a product landing page</p>
+        <div class="card-container">
+
+        <!-- CARDS -->
+
+            <div class='project-card'>
+                <div class='project-image'>
+                    <a href='erasebegin.github.io/necessary-products'><img class='project-image' src='https://i.ibb.co/F06kxq8/2019-03-28.png'></a>
+                    <p class='project-text'><b><a href='http://erasebegin.github.io/necessary-products' target='_blank' class='type2-url'>Necessary Products</a></b><br>Demonstration of a product landing page</p>
+                    <a href="#" class="project-button">Click me</a>
+                </div>
             </div>
-        </div>
-        <div class='project-tile'>
-            <div class="img-container">
-                <a href='erasebegin.github.io/js-journal'><img id='project-image1' class='project-image' src='https://i.ibb.co/25dY6vt/js-journal.png'></a>
-                <p id='project-text2' class='project-text'><b><a href='http://erasebegin.github.io/js-journal' target='_blank' class='type2-url'>JS Journal</a></b><br>A journal of my adventures in learning Javscript.</p>
+            <div class='project-card'>
+                <div class='project-image'>
+                    <a href='erasebegin.github.io/js-journal'><img class='project-image' src='https://i.ibb.co/25dY6vt/js-journal.png'></a>
+                    <p class='project-text'><b><a href='http://erasebegin.github.io/js-journal' target='_blank' class='type2-url'>JS Journal</a></b><br>A journal of my adventures in learning Javscript.</p>
+                    <a href="#" class="project-button">Click me</a>
+                </div>
             </div>
-        </div>
-        <div class='project-tile'>
-            <img class='project-image' src=' '>
-            <p id='project-text3' class='project-text'><b>Project Title</b><br>This is project text about the project</p>
-        </div>
-        <div class='project-tile'>
-            <img class='project-image' src=' '>
-            <p class='project-text'><b>Project Title</b><br>This is project text about the project</p>
-        </div>
-        <div class='project-tile'>
-            <img class='project-image' src=' '>
-            <p class='project-text'><b>Project Title</b><br>This is project text about the project</p>
-        </div>
-        <div class='project-tile'>
-            <img class='project-image' src=' '>
-            <p class='project-text'><b>Project Title</b><br>This is project text about the project</p>
-        </div> -->
-            <div class='card'></div>
-            <div class='card'></div>
-            <div class='card'></div>
-            <div class='card'></div>
-            <div class='card'></div>
-        
-        </div>        
+            <div class='project-card'>
+                <img class='project-image' src='https://i.ibb.co/F06kxq8/2019-03-28.png'>
+                <p class='project-text'><b>Project Title</b><br>This is project text about the project</p>
+                <a href="#" class="project-button">Click me</a>
+            </div>
+            <div class='project-card'>
+                <img class='project-image' src='https://i.ibb.co/F06kxq8/2019-03-28.png'>
+                <p class='project-text'><b>Project Title</b><br>This is project text about the project</p>
+                <a href="#" class="project-button">Click me</a>
+            </div>
+            <div class='project-card'>
+                <img class='project-image' src='https://i.ibb.co/F06kxq8/2019-03-28.png'>
+                <p class='project-text'><b>Project Title</b><br>This is project text about the project</p>
+                <a href="#" class="project-button">Click me</a>
+            </div>
+            <div class='project-card'>
+                <img class='project-image' src='https://i.ibb.co/F06kxq8/2019-03-28.png'>
+                <p class='project-text'><b>Project Title</b><br>This is project text about the project</p>
+                <a href="#" class="project-button">Click me</a>
+            </div>
+            <div class='project-card'>
+                <img class='project-image' src='https://i.ibb.co/F06kxq8/2019-03-28.png'>
+                <p class='project-text'><b>Project Title</b><br>This is project text about the project</p>
+                <a href="#" class="project-button">Click me</a>
+            </div>
+            <div class='project-card'>
+                <img class='project-image' src='https://i.ibb.co/F06kxq8/2019-03-28.png'>
+                <p class='project-text'><b>Project Title</b><br>This is project text about the project</p>
+                <a href="#" class="project-button">Click me</a>
+            </div>
+
+        </div>         
     </section>
     
 
@@ -86,13 +92,13 @@
     </section>
     <section id='Contact'>
         <div class='contact-nav'>
-            <a href='mailto:chris.james.haupt@gmail.com' class='contact-link'><i class="fas fa-envelope-open-text fa-3x"></i></a>
+            <a href='mailto:chris.james.haupt@gmail.com' class='contact-link'><i class='fas fa-envelope-open-text fa-3x'></i></a>
         </div>
         <div class='contact-nav'>
-            <a href='http://www.linked.com/in/chris-haupt' class='contact-link' target='_blank'><i class="fab fa-facebook fa-3x"></i></a>
+            <a href='http://www.linked.com/in/chris-haupt' class='contact-link' target='_blank'><i class='fab fa-facebook fa-3x'></i></a>
         </div>
         <div class='contact-nav'>
-            <a href='http://www.github.com/erasebegin' class='contact-link' target='_blank'><i class="fab fa-github-alt fa-3x"></i></a>
+            <a href='http://www.github.com/erasebegin' class='contact-link' target='_blank'><i class='fab fa-github-alt fa-3x'></i></a>
         </div> 
     </section>
 

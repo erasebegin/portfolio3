@@ -22,11 +22,6 @@ html {
     -moz-animation: bg-gradient-animated 18s ease infinite;
     animation: bg-gradient-animated 18s ease infinite;
 
-    @-webkit-keyframes bg-gradient-animated {
-        0%{background-position:23% 0%}
-        50%{background-position:78% 100%}
-        100%{background-position:23% 0%}
-    }
     @-moz-keyframes bg-gradient-animated {
         0%{background-position:23% 0%}
         50%{background-position:78% 100%}
