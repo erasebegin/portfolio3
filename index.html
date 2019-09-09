@@ -36,46 +36,52 @@
         <div class="card-container">
 
         <!-- CARDS -->
+            <div class='project-card'>
+                <img class='project-image' src='https://i.ibb.co/F06kxq8/2019-03-28.png'></a>
+                <p class='project-text'><b>Project Title</b><br>This is project text about the project</p>
+                <a href='http://www.github.com'>linkylink</a>
+            </div>
 
             <div class='project-card'>
-                <a href='#'><img class='project-image' src='https://i.ibb.co/F06kxq8/2019-03-28.png'></a>
+                <img class='project-image' src='https://i.ibb.co/PQjg7Wb/philosophy-survey.png'>
                 <p class='project-text'><b>Project Title</b><br>This is project text about the project</p>
-                <a href="#" class="project-button">Click me</a>
+                <a href='http://www.github.com'>linkylink</a>
             </div>
+
             <div class='project-card'>
-                <a href='#'><img class='project-image' src='https://i.ibb.co/F06kxq8/2019-03-28.png'></a>
+                <img class='project-image' src='https://i.ibb.co/F06kxq8/2019-03-28.png'>
                 <p class='project-text'><b>Project Title</b><br>This is project text about the project</p>
-                <a href="#" class="project-button">Click me</a>
+                <a href='http://www.github.com'>linkylink</a>
             </div>
+
             <div class='project-card'>
-                <a href='#'><img class='project-image' src='https://i.ibb.co/F06kxq8/2019-03-28.png'></a>
+                <img class='project-image' src='https://i.ibb.co/F06kxq8/2019-03-28.png'>
                 <p class='project-text'><b>Project Title</b><br>This is project text about the project</p>
-                <a href="#" class="project-button">Click me</a>
+                <a href='http://www.github.com'>linkylink</a>
             </div>
+
             <div class='project-card'>
-                <a href='#'><img class='project-image' src='https://i.ibb.co/F06kxq8/2019-03-28.png'></a>
+                <img class='project-image' src='https://i.ibb.co/F06kxq8/2019-03-28.png'>
                 <p class='project-text'><b>Project Title</b><br>This is project text about the project</p>
-                <a href="#" class="project-button">Click me</a>
+                <a href='http://www.github.com'>linkylink</a>
             </div>
+
             <div class='project-card'>
-                <a href='#'><img class='project-image' src='https://i.ibb.co/F06kxq8/2019-03-28.png'></a>
+                <img class='project-image' src='https://i.ibb.co/F06kxq8/2019-03-28.png'>
                 <p class='project-text'><b>Project Title</b><br>This is project text about the project</p>
-                <a href="#" class="project-button">Click me</a>
+                <a href='http://www.github.com'>linkylink</a>
             </div>
+
             <div class='project-card'>
-                <a href='#'><img class='project-image' src='https://i.ibb.co/F06kxq8/2019-03-28.png'></a>
+                <img class='project-image' src='https://i.ibb.co/F06kxq8/2019-03-28.png'>
                 <p class='project-text'><b>Project Title</b><br>This is project text about the project</p>
-                <a href="#" class="project-button">Click me</a>
+                <a href='http://www.github.com'>linkylink</a>
             </div>
+
             <div class='project-card'>
-                <a href='#'><img class='project-image' src='https://i.ibb.co/F06kxq8/2019-03-28.png'></a>
+                <img class='project-image' src='https://i.ibb.co/F06kxq8/2019-03-28.png'>
                 <p class='project-text'><b>Project Title</b><br>This is project text about the project</p>
-                <a href="#" class="project-button">Click me</a>
-            </div>
-            <div class='project-card'>
-                <a href='#'><img class='project-image' src='https://i.ibb.co/F06kxq8/2019-03-28.png'></a>
-                <p class='project-text'><b>Project Title</b><br>This is project text about the project</p>
-                <a href="#" class="project-button">Click me</a>
+                <a href='http://www.github.com'>linkylink</a>
             </div>
 
         </div>         
@@ -99,4 +105,21 @@
     </section>
 
 </body>
+
+    <script
+    src="http://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+    crossorigin="anonymous">
+    </script>
+
+    <script>
+    $(".project-card").click(function() {
+    window.location = $(this).find("a").attr("href"); 
+    return false;
+    });
+
+    $('.project-card').css( 'cursor', 'pointer' );
+    </script>
+
+
 </html>
