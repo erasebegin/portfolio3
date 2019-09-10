@@ -1,72 +1,11 @@
-/* NAVIGATION BUTTONS */
-/* Navigation bar by Patak https://codepen.io/Patak/pen/QpLpOV/ */
-nav {
-  margin: 27px auto 0;
-  position: relative;
-  width: 310px;
-  height: 50px;
-  background-color: var(--purple-blue);
-  border-radius: 8px;
-  font-size: 0;
-}
-
-nav a {
-  line-height: 50px;
-  height: 100%;
-  font-size: 15px;
-  display: inline-block;
-  position: relative;
-  z-index: 1;
-  text-decoration: none;
-  text-transform: uppercase;
-  text-align: center;
-  color: white;
-  cursor: pointer;
-}
-
-nav .animation {
-  position: absolute;
-  height: 100%;
-  top: 0;
-  z-index: 0;
-  -webkit-transition: all .5s ease 0s;
-  transition: all .5s ease 0s;
-  border-radius: 8px;
-}
-
-a:nth-child(1) {
-  width: 100px;
-}
-
-a:nth-child(2) {
-  width: 110px;
-}
-
-a:nth-child(3) {
-  width: 100px;
-}
-
-nav .start-home, a:nth-child(1):hover ~ .animation {
-  width: 100px;
-  left: 0;
-  background-color: var(--pink);
-}
-
-nav .start-about, a:nth-child(2):hover ~ .animation {
-  width: 110px;
-  left: 100px;
-  background-color: var(--purple-dark);
-}
-
-nav .start-blog, a:nth-child(3):hover ~ .animation {
-  width: 100px;
-  left: 210px;
-  background-color: var(--purple1);
+* {
+  margin: 0;
+  padding: 0;
 }
 
 /* Animated gradient by gradient-animator.com */
 .gradient-animation {
-  background: linear-gradient(20deg, #542b8f, #8db8ff, white);
+  background: linear-gradient(20deg, #75AAFF, #8db8ff, white);
   background-size: 200% 300%;
   -webkit-animation: bg-gradient-animated 18s ease infinite;
   animation: bg-gradient-animated 18s ease infinite;
@@ -96,24 +35,14 @@ nav .start-blog, a:nth-child(3):hover ~ .animation {
   }
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  --pink: #D575FF;
-  --purple1: #A06BE8;
-  --purple2: #9582FF;
-  --purple-dark: #6B7AE8;
-  --purple-blue: #75AAFF;
-  font-family: 'Montserrat', sans-serif;
-}
-
 body {
+  font-family: 'Montserrat', sans-serif;
   width: 100%;
 }
 
 img {
   display: block;
-  width: 100%;
+  max-width: 100%;
 }
 
 section {
@@ -126,30 +55,98 @@ header {
   display: inline-block;
   position: fixed;
   height: 100px;
-  width: 100%;
-  background: var(--purple2);
+  width: 100vw;
+  background: #9582FF;
   -webkit-box-shadow: 0.1rem 0.2rem 1rem rgba(120, 0, 150, 0.199);
           box-shadow: 0.1rem 0.2rem 1rem rgba(120, 0, 150, 0.199);
   z-index: 1;
+  /* NAVIGATION BUTTONS */
+  /* Navigation bar by Patak https://codepen.io/Patak/pen/QpLpOV/ */
+}
+
+header nav {
+  margin: 27px auto 0;
+  position: relative;
+  width: 310px;
+  height: 50px;
+  background-color: #75AAFF;
+  border-radius: 8px;
+  font-size: 0;
+}
+
+header nav a {
+  line-height: 50px;
+  height: 100%;
+  font-size: 15px;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+}
+
+header nav .animation {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  z-index: 0;
+  -webkit-transition: all .5s ease 0s;
+  transition: all .5s ease 0s;
+  border-radius: 8px;
+}
+
+header a:nth-child(1) {
+  width: 100px;
+}
+
+header a:nth-child(2) {
+  width: 110px;
+}
+
+header a:nth-child(3) {
+  width: 100px;
+}
+
+header nav .start-home, header a:nth-child(1):hover ~ .animation {
+  width: 100px;
+  left: 0;
+  background-color: #D575FF;
+}
+
+header nav .start-about, header a:nth-child(2):hover ~ .animation {
+  width: 110px;
+  left: 100px;
+  background-color: #6B7AE8;
+}
+
+header nav .start-blog, header a:nth-child(3):hover ~ .animation {
+  width: 100px;
+  left: 210px;
+  background-color: #A06BE8;
 }
 
 #Welcome {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   justify-items: space-around;
   border-bottom: 1px dashed white;
 }
 
 #Welcome #welcome-img {
-  margin: auto auto 0 auto;
+  margin: auto;
+  margin-bottom: 0;
   width: 30%;
 }
 
 #Welcome #welcome-text-wrapper {
   margin: auto;
+  margin-top: 7em;
   width: 40%;
   font-family: Montserrat;
-  color: var(--purple-dark);
+  color: #6B7AE8;
 }
 
 #Welcome #welcome-text-wrapper h1 {
@@ -171,7 +168,7 @@ header {
 }
 
 #Projects {
-  padding: 100px 100px;
+  padding: 2em 0;
   background: rgba(107, 122, 232, 0.5);
   -webkit-box-shadow: 0.5px 0px 1px #5634d1;
           box-shadow: 0.5px 0px 1px #5634d1;
@@ -181,10 +178,14 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: space-around;
+      -ms-flex-align: space-around;
+          align-items: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  justify-items: space-around;
-  background: rgba(255, 255, 255, 0.288);
   margin: 1em 1em;
   padding-left: 2em;
   border-radius: 10px;
@@ -201,44 +202,44 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   margin: 2em 2em;
-  max-width: 400px;
-  min-height: 400px;
-  background: var(--purple2);
+  background: #9582FF;
+  background-size: cover;
   border-radius: 4px;
-  -webkit-filter: brightness(90%);
-          filter: brightness(90%);
+  height: 250px;
+  width: 300px;
+  text-align: center;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+  -webkit-filter: brightness(90%);
+          filter: brightness(90%);
 }
 
-#Projects .card-container .project-card .project-image {
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
+#Projects .card-container .project-card a {
+  display: none;
 }
 
-#Projects .card-container .project-card .project-button {
-  background: var(--pink);
-  color: #230075;
-  padding: 1em 2em;
-  width: 60%;
-  border: 1px solid black;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  text-decoration: none;
-}
-
-#Projects .card-container .project-card .project-button:hover,
-#Projects .card-container .project-card .project-button:focus {
-  -webkit-box-shadow: 0 0.5em 0.5em -0.4em purple;
-          box-shadow: 0 0.5em 0.5em -0.4em purple;
-  -webkit-transform: translateY(-0.25em);
-          transform: translateY(-0.25em);
+#Projects .card-container .project-card .project-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0.5em 0.3em;
+  height: 40%;
+  width: 100%;
+  background: linear-gradient(45deg, #6B7AE8 20%, rgba(70, 49, 100, 0.74));
+  color: #c6dcff;
+  text-shadow: 0px 0px 4px black;
+  -webkit-box-shadow: -1px 1px 3px black;
+          box-shadow: -1px 1px 3px black;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
 
 #Projects .card-container .project-card:hover,
@@ -247,5 +248,87 @@ header {
   transition: 0.5s;
   -webkit-filter: brightness(80%);
           filter: brightness(80%);
+}
+
+#Projects #project-card1 {
+  background-image: url(https://i.ibb.co/PQjg7Wb/philosophy-survey.png);
+}
+
+#Projects #project-card2 {
+  background-image: url(https://i.ibb.co/25dY6vt/js-journal.png);
+}
+
+#Projects #project-card3 {
+  background-image: url(https://i.ibb.co/PQjg7Wb/philosophy-survey.png);
+}
+
+#Projects #project-card4 {
+  background-image: url(https://i.ibb.co/PQjg7Wb/philosophy-survey.png);
+}
+
+#Projects #project-card5 {
+  background-image: url(https://i.ibb.co/PQjg7Wb/philosophy-survey.png);
+}
+
+#Projects #project-card6 {
+  background-image: url(https://i.ibb.co/PQjg7Wb/philosophy-survey.png);
+}
+
+#Projects #project-card7 {
+  background-image: url(https://i.ibb.co/PQjg7Wb/philosophy-survey.png);
+}
+
+#Projects #project-card8 {
+  background-image: url(https://i.ibb.co/PQjg7Wb/philosophy-survey.png);
+}
+
+#Contact {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 20vh;
+}
+
+#Contact a {
+  color: white;
+}
+
+@media (max-width: 750px) {
+  #Welcome {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    height: 110vh;
+  }
+  #Welcome #welcome-img {
+    width: 70%;
+    margin-top: 3em;
+  }
+  #Welcome #welcome-text-wrapper {
+    width: 100%;
+    margin-top: 2em;
+  }
+  #Welcome #welcome-text-wrapper h1 {
+    font-size: 2rem;
+    margin: 0;
+    line-height: 1.8em;
+    -webkit-filter: brightness(0.5);
+            filter: brightness(0.5);
+  }
+  #Welcome #welcome-text-wrapper h2 {
+    font-size: 1.5rem;
+    -webkit-filter: brightness(0.7);
+            filter: brightness(0.7);
+  }
+  #Welcome #welcome-text-wrapper .subheading-p {
+    margin: 0;
+  }
 }
 /*# sourceMappingURL=main.css.map */

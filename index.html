@@ -2,7 +2,6 @@
 <html>
     <head>
         <title>Chris Haupt's Portfolio</title>
-        <script src='https://kit.fontawesome.com/f5f87e1ceb.js'></script>
         <link rel='icon' href='favicon.ico' type='image/x-icon'>
         <link rel='stylesheet' type='text/css' href='./styles/main.css'>
         <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap" rel="stylesheet">
@@ -36,62 +35,49 @@
         <div class="card-container">
 
         <!-- CARDS -->
-            <div class='project-card'>
-                <img class='project-image' src='https://i.ibb.co/F06kxq8/2019-03-28.png'></a>
-                <p class='project-text'><b>Project Title</b><br>This is project text about the project</p>
-                <a href='http://www.github.com'>linkylink</a>
+            <div class='project-card' id='project-card1'>
+                <a href='https://erasebegin.github.io/thinkdrops' target='_blank'></a>
+                <p class='project-text'><b>Philosophy Survey</b><br>Responsive form demo using flex</p>
             </div>
 
-            <div class='project-card'>
-                <img class='project-image' src='https://i.ibb.co/PQjg7Wb/philosophy-survey.png'>
-                <p class='project-text'><b>Project Title</b><br>This is project text about the project</p>
-                <a href='http://www.github.com'>linkylink</a>
+            <div class='project-card' id='project-card2'>
+                <a href='https://www.github.com' target='_blank'></a>
+                <p class='project-text'><b>JS Journal</b><br>A record of my adventures in learning javascript</p>
             </div>
 
-            <div class='project-card'>
-                <img class='project-image' src='https://i.ibb.co/F06kxq8/2019-03-28.png'>
+            <div class='project-card' id='project-card3'>
+                <a href='https://www.github.com' target='_blank'></a>
                 <p class='project-text'><b>Project Title</b><br>This is project text about the project</p>
-                <a href='http://www.github.com'>linkylink</a>
             </div>
 
-            <div class='project-card'>
-                <img class='project-image' src='https://i.ibb.co/F06kxq8/2019-03-28.png'>
+            <div class='project-card' id='project-card4'>
+                <a href='https://www.github.com' target='_blank'></a>
                 <p class='project-text'><b>Project Title</b><br>This is project text about the project</p>
-                <a href='http://www.github.com'>linkylink</a>
             </div>
 
-            <div class='project-card'>
-                <img class='project-image' src='https://i.ibb.co/F06kxq8/2019-03-28.png'>
+            <div class='project-card' id='project-card5'>
+                <a href='https://www.github.com' target='_blank'></a>
                 <p class='project-text'><b>Project Title</b><br>This is project text about the project</p>
-                <a href='http://www.github.com'>linkylink</a>
             </div>
 
-            <div class='project-card'>
-                <img class='project-image' src='https://i.ibb.co/F06kxq8/2019-03-28.png'>
+            <div class='project-card' id='project-card6'>
+                <a href='https://www.github.com' target='_blank'></a>
                 <p class='project-text'><b>Project Title</b><br>This is project text about the project</p>
-                <a href='http://www.github.com'>linkylink</a>
             </div>
 
-            <div class='project-card'>
-                <img class='project-image' src='https://i.ibb.co/F06kxq8/2019-03-28.png'>
+            <!-- <div class='project-card' id='project-card7'>
+                <a href='https://www.github.com' target='_blank'></a>
                 <p class='project-text'><b>Project Title</b><br>This is project text about the project</p>
-                <a href='http://www.github.com'>linkylink</a>
-            </div>
+            </div> -->
 
-            <div class='project-card'>
-                <img class='project-image' src='https://i.ibb.co/F06kxq8/2019-03-28.png'>
+            <!-- <div class='project-card' id='project-card8'>
+                <a href='https://www.github.com' target='_blank'></a>
                 <p class='project-text'><b>Project Title</b><br>This is project text about the project</p>
-                <a href='http://www.github.com'>linkylink</a>
-            </div>
+            </div> -->
 
         </div>         
     </section>
-    
 
-
-    <section id = 'Illustration'>
-
-    </section>
     <section id='Contact'>
         <div class='contact-nav'>
             <a href='mailto:chris.james.haupt@gmail.com' class='contact-link'><i class='fas fa-envelope-open-text fa-3x'></i></a>
@@ -106,18 +92,26 @@
 
 </body>
 
+    <!-- FONTAWESOME AND JQUERY COMPONENTS -->
+
+    <script src='https://kit.fontawesome.com/f5f87e1ceb.js'></script>
+
     <script
     src="http://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
     crossorigin="anonymous">
     </script>
 
+    <!-- Make project cards clickable -->
     <script>
     $(".project-card").click(function() {
     window.location = $(this).find("a").attr("href"); 
     return false;
     });
+    </script>
 
+    <!-- Change cursor to pointer -->
+    <script>
     $('.project-card').css( 'cursor', 'pointer' );
     </script>
 

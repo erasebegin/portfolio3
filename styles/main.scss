@@ -1,20 +1,20 @@
-@import './_nav-buttons.scss';
-@import './_gradient-animation.scss';
 
 // GENERAL PROPERTIES
+
+$pink: #D575FF;
+$purple1: #A06BE8;
+$purple2: #9582FF;
+$purple-dark: #6B7AE8;
+$purple-blue: #75AAFF;
 
 * {
     margin: 0;
     padding: 0;
 }
 
+@import './_gradient-animation.scss';
+
 body {
-    $pink: #D575FF;
-    $purple1: #A06BE8;
-    $purple2: #9582FF;
-    $purple-dark: #6B7AE8;
-    $purple-blue: #75AAFF;
-    
     font-family: 'Montserrat', sans-serif;
     width: 100%;
 }
@@ -29,47 +29,52 @@ section {
 }
 
 // HEADER
-// for nav properties, see /styles/_nav-buttons.scss
 
 header {
     display: inline-block;
     position: fixed;
     height: 100px;
-    width: 100%;
+    width: 100vw;
     background: $purple2;
     box-shadow: 0.1rem 0.2rem 1rem rgba(120, 0, 150, 0.199);
     z-index: 1;
+
+    // for nav properties, see /styles/_nav-buttons.scss
+    @import './_nav-buttons.scss';
 }
+
 
 //WELCOME SECTION
 
 #Welcome {
         width: 100%;
-        height: 100vh;
+        min-height: 100vh;
         justify-items: space-around;
         border-bottom: 1px dashed white;
 
     #welcome-img {
-        margin: auto auto 0 auto;
+        margin: auto;
+        margin-bottom: 0;
         width: 30%;
     }
 
     #welcome-text-wrapper {
         margin: auto;
+        margin-top: 7em;
         width: 40%;
         font-family: Montserrat;
         color: $purple-dark;
 
-        h1 { 
-            font-size: 4rem;
-            margin: 1em 0 0.4em 0;
-            line-height: 1.8em;
-            filter: brightness(0.5);
-        }
+            h1 { 
+                font-size: 4rem;
+                margin: 1em 0 0.4em 0;
+                line-height: 1.8em;
+                filter: brightness(0.5);
+            }
 
-        h2 {
-            font-size: 2rem;
-            filter: brightness(0.7);
+            h2 {
+                font-size: 2rem;
+                filter: brightness(0.7);
 
             .subheading-p {
                 margin: 0.5em 0;
@@ -81,47 +86,71 @@ header {
 //PROJECTS SECTION
 
 #Projects {
-    padding: 100px 100px;
+    padding: 2em 0;
     background: rgba(107, 122, 232, 0.5);
     box-shadow: 0.5px 0px 1px rgb(86, 52, 209);
 
-    .card-container {
-        display: flex;
-        flex-wrap: wrap;
-        background: rgba(255, 255, 255, 0.288);
-        margin: 1em 1em;
-        padding-left: 2em;
-        border-radius: 10px;
+    // See _cards.scss for project card styles
+    @import './_cards.scss';
+}
 
-        .project-card {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-            margin: 2em 2em;
-            background: $purple2;
-            border-radius: 4px;
-            filter: brightness(90%);
-            transition: 0.2s;
-            height: 900px;
-    
-            .project-image {
-                height: 100px;
-                object-fit: fill;
-                border-top-left-radius: 4px;
-                border-top-right-radius: 4px;
+//CONTACT SECTION
+
+#Contact {
+    justify-content: space-around;
+    align-items: center;
+    min-height: 20vh;
+
+    a {
+        color: white;
+    }
+}
+
+//MEDIA QUERIES
+
+//BREAKPOINT 1
+
+@media (max-width: 750px) {
+    #Welcome {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        height: 110vh;
+
+        #welcome-img {
+            width: 70%;
+            margin-top: 3em;
+        }
+
+        #welcome-text-wrapper {
+            width: 100%;
+            margin-top: 2em;
+
+            h1 { 
+                font-size: 2rem;
+                margin: 0;
+                line-height: 1.8em;
+                filter: brightness(0.5);
             }
 
-        }
-    
-        .project-card:hover,
-        .project-card:focus {
-            transition: 0.5s;
-            filter: brightness(80%);
-        }
+            h2 {
+                font-size: 1.5rem;
+                filter: brightness(0.7);
+            }
 
-    }
-  
+            .subheading-p {
+                margin: 0;
+            }
+        }
+    } 
 }
+
+//BREAKPOINT2
+
+@media (max-width: 900px) {
+
+}
+
+//need intermediary breakpoint to fix display issues at intermediary point (mainly with intro tet)
 
 

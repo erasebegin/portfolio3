@@ -1,7 +1,7 @@
     /* Animated gradient by gradient-animator.com */
     
  .gradient-animation {   
-    background: linear-gradient(20deg, rgb(84, 43, 143), rgb(141, 184, 255), white);
+    background: linear-gradient(20deg, $purple-blue, rgb(141, 184, 255), white);
     background-size: 200% 300%;
 
     -webkit-animation: bg-gradient-animated 18s ease infinite;
