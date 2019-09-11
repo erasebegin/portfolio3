@@ -129,9 +129,10 @@ header nav .start-blog, header a:nth-child(3):hover ~ .animation {
 }
 
 #Welcome {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   width: 100%;
-  min-height: 100vh;
-  justify-items: space-around;
   border-bottom: 1px dashed white;
 }
 
@@ -142,16 +143,13 @@ header nav .start-blog, header a:nth-child(3):hover ~ .animation {
 }
 
 #Welcome #welcome-text-wrapper {
-  margin: auto;
-  margin-top: 7em;
-  width: 40%;
-  font-family: Montserrat;
+  width: 50%;
   color: #6B7AE8;
 }
 
 #Welcome #welcome-text-wrapper h1 {
-  font-size: 4rem;
-  margin: 1em 0 0.4em 0;
+  font-size: 3.5rem;
+  margin: 1em 0 0.5em 0;
   line-height: 1.8em;
   -webkit-filter: brightness(0.5);
           filter: brightness(0.5);
@@ -283,8 +281,9 @@ header nav .start-blog, header a:nth-child(3):hover ~ .animation {
 }
 
 #Contact {
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -293,7 +292,8 @@ header nav .start-blog, header a:nth-child(3):hover ~ .animation {
 
 #Contact a {
   color: rgba(68, 77, 145, 0.705);
-  font-size: 2em;
+  font-size: 1em;
+  margin: 0 2em;
 }
 
 @media (max-width: 1000px) {

@@ -47,9 +47,8 @@ header {
 //WELCOME SECTION
 
 #Welcome {
+        align-items: flex-end;
         width: 100%;
-        min-height: 100vh;
-        justify-items: space-around;
         border-bottom: 1px dashed white;
 
     #welcome-img {
@@ -59,15 +58,12 @@ header {
     }
 
     #welcome-text-wrapper {
-        margin: auto;
-        margin-top: 7em;
-        width: 40%;
-        font-family: Montserrat;
+        width: 50%;
         color: $purple-dark;
 
             h1 { 
-                font-size: 4rem;
-                margin: 1em 0 0.4em 0;
+                font-size: 3.5rem;
+                margin: 1em 0 0.5em 0;
                 line-height: 1.8em;
                 filter: brightness(0.5);
             }
@@ -97,13 +93,14 @@ header {
 //CONTACT SECTION
 
 #Contact {
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     min-height: 20vh;
 
     a {
         color: rgba(68, 77, 145, 0.705);
-        font-size: 2em;
+        font-size: 1em;
+        margin: 0 2em;
     }
 }
 
