@@ -115,7 +115,7 @@ header {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        height: 110vh;
+        min-height: 110vh;
 
         #welcome-img {
             width: 70%;
@@ -148,7 +148,12 @@ header {
 //BREAKPOINT2
 
 @media (max-width: 900px) {
+    #Welcome {
 
+        #welcome-img {
+            // order: -1;
+        }
+    }
 }
 
 //need intermediary breakpoint to fix display issues at intermediary point (mainly with intro tet)

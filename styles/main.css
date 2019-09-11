@@ -259,7 +259,7 @@ header nav .start-blog, header a:nth-child(3):hover ~ .animation {
 }
 
 #Projects #project-card3 {
-  background-image: url(https://i.ibb.co/PQjg7Wb/philosophy-survey.png);
+  background-image: url(https://i.ibb.co/XD1wm5B/fine-wine2.png);
 }
 
 #Projects #project-card4 {
@@ -305,7 +305,7 @@ header nav .start-blog, header a:nth-child(3):hover ~ .animation {
         -ms-flex-align: center;
             align-items: center;
     text-align: center;
-    height: 110vh;
+    min-height: 110vh;
   }
   #Welcome #welcome-img {
     width: 70%;
