@@ -102,7 +102,8 @@ header {
     min-height: 20vh;
 
     a {
-        color: white;
+        color: rgba(68, 77, 145, 0.705);
+        font-size: 2em;
     }
 }
 
@@ -110,12 +111,11 @@ header {
 
 //BREAKPOINT 1
 
-@media (max-width: 750px) {
+@media (max-width: 1000px) {
     #Welcome {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        min-height: 110vh;
 
         #welcome-img {
             width: 70%;
@@ -125,16 +125,16 @@ header {
         #welcome-text-wrapper {
             width: 100%;
             margin-top: 2em;
+            line-height: 4em;
 
             h1 { 
-                font-size: 2rem;
+                font-size: 3.5rem;
                 margin: 0;
-                line-height: 1.8em;
                 filter: brightness(0.5);
             }
 
             h2 {
-                font-size: 1.5rem;
+                font-size: 2.2rem;
                 filter: brightness(0.7);
             }
 
@@ -150,12 +150,16 @@ header {
 @media (max-width: 900px) {
     #Welcome {
 
-        #welcome-img {
-            // order: -1;
+        h1 {
+            font-size: 2em;
         }
     }
 }
 
 //need intermediary breakpoint to fix display issues at intermediary point (mainly with intro tet)
+
+//use transform+transition on something
+
+//try using background-blend-mode on main image
 
 
