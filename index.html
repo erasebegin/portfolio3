@@ -5,6 +5,7 @@
         <link rel='icon' href='favicon.ico' type='image/x-icon'>
         <link rel='stylesheet' type='text/css' href='./styles/main.css'>
         <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:300,400,500&display=swap&subset=chinese-simplified" rel="stylesheet">
     </head>
 
     <body class='main gradient-animation'>
@@ -25,10 +26,12 @@
 
         <img id='welcome-img' src='https://i.ibb.co/vwz3zFW/mai-faec1-2x.png' alt='mai faec'>
         <div id='welcome-text-wrapper'>
-            <h1 id='welcome-heading'>Hey, I'm Chris<br>你好，我叫克里斯</h1>
+            <h1 id='welcome-heading'>
+                Hey, I'm Chris<br>
+                <span class='chinese-text'>你好，我叫克里斯</span></h1>
             <h2 id='welcome-subheading'>
-                <p class='subheading-p'>I'm a web developer and illustrator, check out my projects below.</p> 
-                <p class='subheading-p'>我是网页开发者和插画师, 往下面看我的项目吧。</p>
+                I'm a web developer and illustrator, check out my projects below.<br>
+                <span class='chinese-text'>我是网页开发者和插画师, 往下面看我的项目吧</span>
             </h2>
         </div>
 
@@ -116,11 +119,5 @@
     return false;
     });
     </script>
-
-    <!-- Change cursor to pointer -->
-    <script>
-    $('.project-card').css( 'cursor', 'pointer' );
-    </script>
-
 
 </html>

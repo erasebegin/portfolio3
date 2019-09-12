@@ -132,19 +132,26 @@ header nav .start-blog, header a:nth-child(3):hover ~ .animation {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
-  border-bottom: 1px dashed white;
+  border-bottom: 1px solid white;
 }
 
 #Welcome #welcome-img {
-  margin: auto;
-  margin-bottom: 0;
+  margin: 5em 2em 0 2em;
   width: 30%;
 }
 
 #Welcome #welcome-text-wrapper {
   width: 50%;
   color: #6B7AE8;
+  margin: 3em 1em 2em 1em;
+}
+
+#Welcome #welcome-text-wrapper .chinese-text {
+  font-family: 'Noto Sans SC', sans-serif;
 }
 
 #Welcome #welcome-text-wrapper h1 {
@@ -157,12 +164,9 @@ header nav .start-blog, header a:nth-child(3):hover ~ .animation {
 
 #Welcome #welcome-text-wrapper h2 {
   font-size: 2rem;
+  line-height: 1.5;
   -webkit-filter: brightness(0.7);
           filter: brightness(0.7);
-}
-
-#Welcome #welcome-text-wrapper h2 .subheading-p {
-  margin: 0.5em 0;
 }
 
 #Projects {
@@ -210,6 +214,7 @@ header nav .start-blog, header a:nth-child(3):hover ~ .animation {
   height: 250px;
   width: 300px;
   text-align: center;
+  cursor: pointer;
   -webkit-transition: 0.2s;
   transition: 0.2s;
   -webkit-filter: brightness(90%);
@@ -234,8 +239,8 @@ header nav .start-blog, header a:nth-child(3):hover ~ .animation {
   background: linear-gradient(45deg, #6B7AE8 20%, rgba(70, 49, 100, 0.74));
   color: #c6dcff;
   text-shadow: 0px 0px 4px black;
-  -webkit-box-shadow: -1px 1px 3px black;
-          box-shadow: -1px 1px 3px black;
+  -webkit-box-shadow: -1px 1px 3px rgba(120, 0, 150, 0.199);
+          box-shadow: -1px 1px 3px rgba(120, 0, 150, 0.199);
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
 }
@@ -308,22 +313,20 @@ header nav .start-blog, header a:nth-child(3):hover ~ .animation {
     text-align: center;
   }
   #Welcome #welcome-img {
-    width: 70%;
-    margin-top: 3em;
+    width: 50%;
+    margin-top: 5em;
   }
   #Welcome #welcome-text-wrapper {
-    width: 100%;
+    width: 85%;
     margin-top: 2em;
-    line-height: 4em;
   }
   #Welcome #welcome-text-wrapper h1 {
-    font-size: 3.5rem;
-    margin: 0;
+    font-size: 3rem;
     -webkit-filter: brightness(0.5);
             filter: brightness(0.5);
   }
   #Welcome #welcome-text-wrapper h2 {
-    font-size: 2.2rem;
+    font-size: 1.9rem;
     -webkit-filter: brightness(0.7);
             filter: brightness(0.7);
   }
